@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="900.0" style="-fx-background-color: #FFFF99;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.polinamueller_javafx.HelloController">
+   <children>
+      <AnchorPane prefHeight="106.0" prefWidth="900.0" style="-fx-background-color: black;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <Label layoutX="403.0" layoutY="14.0" prefHeight="77.0" prefWidth="186.0" text="JavaFX" textAlignment="CENTER" textFill="#fcfafa">
+               <font>
+                  <Font name="Gabriola" size="64.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutY="106.0" prefHeight="394.0" prefWidth="218.0" style="-fx-background-color: #000000;" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="105.0">
+         <children>
+            <VBox prefHeight="388.0" prefWidth="206.0">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <children>
+                  <Button fx:id="BtnDataEntry" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="26.0" prefWidth="207.0" style="-fx-background-color: black;" text="Dateneingabe" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font size="27.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="BtnResult" alignment="BASELINE_LEFT" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="26.0" prefWidth="208.0" style="-fx-background-color: black;" text="Ergebnis" textFill="WHITE">
+                     <font>
+                        <Font size="28.0" />
+                     </font>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </Button>
+               </children>
+            </VBox>
+         </children>
+         <effect>
+            <DropShadow />
+         </effect>
+      </AnchorPane>
+      <Pane fx:id="PaneResult" layoutX="216.0" layoutY="105.0" prefHeight="395.0" prefWidth="690.0" style="-fx-background-color: #DDA0DD;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="217.60000000000002" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="104.80000000000001">
+         <children>
+            <Label fx:id="GbDateLabel" layoutX="219.0" layoutY="274.0" prefHeight="17.0" prefWidth="245.0">
+               <font>
+                  <Font name="Georgia" size="31.0" />
+               </font>
+            </Label>
+            <Label fx:id="TextLabel" layoutX="114.0" layoutY="164.0" textAlignment="CENTER">
+               <font>
+                  <Font name="Gabriola" size="56.0" />
+               </font>
+            </Label>
+            <Label fx:id="FullNameLabel" contentDisplay="RIGHT" layoutX="219.0" layoutY="73.0" prefHeight="64.0" prefWidth="245.0" textAlignment="CENTER" textOverrun="LEADING_ELLIPSIS">
+               <font>
+                  <Font name="Gabriola" size="35.0" />
+               </font>
+            </Label>
+         </children></Pane>
+      <Pane fx:id="PaneDataEntry" layoutX="218.0" layoutY="105.0" prefHeight="395.0" prefWidth="682.0" style="-fx-background-color: #9370DB;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="217.60000000000002" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="104.80000000000001">
+         <children>
+            <Label layoutX="36.0" layoutY="30.0" prefHeight="43.0" prefWidth="316.0" text="Vollständige Name">
+               <font>
+                  <Font name="Franklin Gothic Pro Heavy" size="25.0" />
+               </font>
+               <padding>
+                  <Insets bottom="30.0" />
+               </padding>
+            </Label>
+            <Label layoutX="36.0" layoutY="131.0" prefHeight="43.0" prefWidth="316.0" text="Geburtsdatum">
+               <font>
+                  <Font name="Franklin Gothic Pro Heavy" size="25.0" />
+               </font>
+               <padding>
+                  <Insets bottom="30.0" top="30.0" />
+               </padding>
+            </Label>
+            <DatePicker fx:id="GbDate" layoutX="36.0" layoutY="252.0" prefHeight="25.0" prefWidth="227.0" promptText="11.10.1992" />
+            <TextField fx:id="FullName" layoutX="36.0" layoutY="106.0" prefHeight="25.0" prefWidth="227.0" promptText="Max Müller">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </TextField>
+            <Label layoutX="36.0" layoutY="81.0" text="Geben Sie Ihren vollständigen Namen ein">
+               <padding>
+                  <Insets bottom="8.0" />
+               </padding>
+            </Label>
+            <Label layoutX="36.0" layoutY="221.0" text="Geben Sie Ihr Geburtsdatum ein">
+               <padding>
+                  <Insets bottom="8.0" />
+               </padding>
+            </Label>
+         </children></Pane>
+   </children>
+</AnchorPane>
